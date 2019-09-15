@@ -3,7 +3,7 @@ description = "A minimal blog theme for zola"
 license = "MIT"
 homepage = "https://github.com/Sparkenstein/clean"
 min_version = "0.6.0"
-demo = "https://zola-hyde.netlify.com"
+# demo = "https://zola-hyde.netlify.com"
 
 [extra]
 clean_nav = true
