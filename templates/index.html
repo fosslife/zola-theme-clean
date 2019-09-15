@@ -7,6 +7,7 @@
 	<title>{% block title %}{{config.title}}{% endblock title %}</title>
 	<meta name='viewport' content='width=device-width, initial-scale=1'>
 	<link rel="stylesheet" href="{{ get_url(path="main.css", trailing_slash=false) }}">
+	<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet"> 
 </head>
 
 <body>
@@ -21,13 +22,15 @@
 		{% block content %}
 		<div class="posts">
 			{% for post in section.pages %}
-			<h2 class="post-title">
-				<a href="{{post.permalink}}">
-					{{ post.title }}
-				</a>
-			</h2>
-			<p>{{ post.description }}</p>
-			<hr />
+			<div class="post">
+				<h2 class="post-title">
+					<a href="{{post.permalink}}">
+						{{ post.title }}
+					</a>
+				</h2>
+				<p>{{ post.description }}</p>
+				<hr />
+			</div>
 			{% endfor %}
 		</div>
 		{% endblock content %}
