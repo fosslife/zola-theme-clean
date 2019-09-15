@@ -14,3 +14,8 @@ build_search_index = false
 
 [extra]
 clean_nav = true
+nav = [
+	{url = "/about", name = "About"},
+	{url = "https://github.com/Sparkenstein", name = "Github"},
+	{url = "https://twitter.com/zetabites", name = "Twitter"},
+]

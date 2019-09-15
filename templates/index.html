@@ -5,8 +5,17 @@
 	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
 	<title>{% block title %}{{config.title}}{% endblock title %}</title>
 	<meta name='viewport' content='width=device-width, initial-scale=1'>
+
+	<link rel="stylesheet" href="{{ get_url(path="main.css", trailing_slash=false) }}">
+
 </head>
 <body>
-	<h1>Hello Zola</h1>
+	<nav>
+		<ul>
+			{% for link in config.extra.nav %}
+				<li> <a target="_blank" href="{{link.url}}">{{link.name}}</a> </li>
+			{% endfor %}
+		</ul>
+	</nav>
 </body>
 </html>
