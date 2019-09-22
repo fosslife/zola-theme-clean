@@ -21,18 +21,26 @@
 	<div class="container">
 		{% block content %}
 		<div class="posts">
-			{% for post in section.pages %}
+			{% for post in paginator.pages %}
 			<div class="post">
 				<h2 class="post-title">
 					<a href="{{post.permalink}}">
 						{{ post.title }}
 					</a>
 				</h2>
-				<p>{{ post.description }}</p>
+				<p>{{ post.summary | safe }}</p>
 				<!-- <hr /> -->
 			</div>
 			{% endfor %}
 		</div>
+		<nav class="pagination">
+			{% if paginator.previous %}
+				<a class="previous" href="{{ paginator.previous }}">‹ Previous</a>
+			{% endif %}
+			{% if paginator.next %}
+				<a class="next" href="{{ paginator.next }}">Next ›</a>
+			{% endif %}
+		</nav>
 		{% endblock content %}
 	</div>
 	<footer>
