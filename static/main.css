@@ -49,6 +49,18 @@ li:hover {
 }
 
 .post {
-  border-bottom: 2px solid #2c2c2c;
+  border-bottom: 1px solid #2c2c2c85;
   padding-top: 20px;
+}
+
+.post-title a {
+  font-weight: lighter;
+}
+
+.pagination {
+  padding: 10px 0px;
+}
+
+.pagination .next {
+  float: right;
 }
